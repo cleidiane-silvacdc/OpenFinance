@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h1>Configurações do Hub</h1>
+  {% if message %}
+    <div class="alert alert-success">{{ message }}</div>
+  {% endif %}
+  <form method="POST" class="form-grid">
+    <label>Banco A (endereço OpenFinance)</label>
+    <input type="text" name="banco_a_url" value="{{ config.banco_a_url }}" required>
+
+    <label>Banco B (endereço OpenFinance)</label>
+    <input type="text" name="banco_b_url" value="{{ config.banco_b_url }}" required>
+
+    <button class="button-primary">Salvar</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,139 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #f4f6fb;
+  color: #1f2937;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: #fff;
+}
+
+.topbar .brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.topbar nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+.page-content {
+  max-width: 960px;
+  margin: 32px auto;
+  padding: 0 16px 32px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.08);
+}
+
+.center-card {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.form-grid label {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.form-grid input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.button-primary {
+  width: fit-content;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.alert {
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.alert-success {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.result-card {
+  margin-top: 24px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 14px;
+}
+
+.result-card dl {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px 24px;
+}
+
+.result-card dt {
+  font-weight: 700;
+  color: #111827;
+}
+
+.result-card dd {
+  margin: 0;
+  color: #374151;
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topbar nav {
+    margin-top: 12px;
+  }
+  .topbar nav a {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 14px;
+  }
+}

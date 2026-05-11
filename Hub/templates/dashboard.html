@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+  <h1>Painel do Hub</h1>
+  <p>Use este painel para consultar o OpenFinance dos bancos conectados.</p>
+  {% if message %}
+    <div class="alert alert-success">{{ message }}</div>
+  {% endif %}
+  <form method="POST" action="{{ url_for('consulta') }}" class="form-grid">
+    <label>CPF</label>
+    <input type="text" name="cpf" value="{{ cpf or '' }}" placeholder="Digite o CPF" required>
+    <button class="button-primary">Consultar</button>
+  </form>
+
+  {% if resultado %}
+  <section class="result-card">
+    <h2>Resultado OpenFinance</h2>
+    <dl>
+      <dt>Cliente</dt><dd>{{ resultado.cliente }}</dd>
+      <dt>Score</dt><dd>{{ resultado.score }}</dd>
+      <dt>Decisão</dt><dd>{{ resultado.decisao }}</dd>
+      <dt>Limite sugerido</dt><dd>{{ resultado.limite_sugerido }}</dd>
+    </dl>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

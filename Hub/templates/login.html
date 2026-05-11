@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card center-card">
+  <h1>Login do Hub</h1>
+  <p>Faça login para acessar o painel do Hub OpenFinance.</p>
+  {% if error %}
+    <div class="alert alert-error">{{ error }}</div>
+  {% endif %}
+  <form method="POST" class="form-grid">
+    <label>Usuário</label>
+    <input type="text" name="usuario" value="{{ usuario or '' }}" required>
+
+    <label>Senha</label>
+    <input type="password" name="senha" required>
+
+    <button class="button-primary">Entrar</button>
+  </form>
+</div>
+{% endblock %}
